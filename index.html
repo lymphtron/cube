@@ -45,7 +45,6 @@ body {
   animation: rgbBorder 2000ms linear infinite;
 }
 
-/* Küp yüzleri */
 .front  { transform: rotateY(  0deg) translateZ(100px); }
 .back   { transform: rotateY(180deg) translateZ(100px); }
 .right  { transform: rotateY( 90deg) translateZ(100px); }
@@ -53,20 +52,17 @@ body {
 .top    { transform: rotateX( 90deg) translateZ(100px); }
 .bottom { transform: rotateX(-90deg) translateZ(100px); }
 
-/* Dönme animasyonu */
 @keyframes spin {
   from { transform: rotateX(0deg) rotateY(360deg); }
   to   { transform: rotateX(360deg) rotateY(0deg); }
 }
 
-/* Yukarı-aşağı salınım */
 @keyframes float {
   0%   { transform: translateY(80px); }
   50%  { transform: translateY(-80px); }
   100% { transform: translateY(80px); }
 }
 
-/* RGB kenar animasyonu */
 @keyframes rgbBorder {
   0% {
     border-color: rgb(255, 0, 0);
@@ -97,7 +93,6 @@ body {
 </head>
 <body>
 
-<!-- Arka plan müzik -->
 <audio id="bgm" src="funkytown.mp3" loop></audio>
 
 <div class="scene">
@@ -114,7 +109,7 @@ body {
 </div>
 
 <script>
-// İlk tıklamada müziği başlat (autoplay engeline takılmasın)
+
 window.addEventListener('click', function () {
   const audio = document.getElementById('bgm');
   if (audio.paused) {
